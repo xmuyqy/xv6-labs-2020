@@ -3,6 +3,7 @@
 #include "kernel/stat.h"
 #include "user/user.h"
 
+
 int
 main(int argc, char *argv[])
 {
@@ -22,6 +23,9 @@ main(int argc, char *argv[])
   for(i = 2; i < argc && i < MAXARG; i++){
     nargv[i-2] = argv[i];
   }
+  
   exec(nargv[0], nargv);
+  //printf("it's here");
   exit(0);
 }
+
